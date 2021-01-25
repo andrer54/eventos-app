@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Eventos APP</title>
+                <!-- Compiled and minified CSS -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+                <!-- Compiled and minified JavaScript -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+           
+    </head>
+    <body>
+        <h1>Pagina de cadastro de eventos</h1>
+        <th:block th:include="mensagemValidacao"></th:block>
+        <form class="container" method="post">
+            Nome: <input type="text" name="nome" id="" />
+            <div class="row">
+                <div class="input-field col s6">
+                    Local: <input type="text" name="local" id="" />
+                </div>
+                <div class="input-field col s3">
+                    Data: <input type="text" name="data" id="" />
+                </div>    
+                <div class="input-field col s3">
+                     Horario: <input type="text" name="horario" id="" />
+                </div>
+            </div>
+
+             
+            <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+
+        </form>
+    </body>
+</html>

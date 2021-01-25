@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Eventos APP</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Lista de eventos</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/cadastrarEvento" class="waves-effect waves-light btn">Cadastrar evento</a></li>
+                <li><a href="/cadastrarTarefas" class="waves-effect waves-light btn">Cadastrar tarefas</a></li>
+                <li><a href="/tarefas" class="waves-effect waves-light btn">tarefas</a></li>
+              </ul>
+            </div>
+          </nav>
+        
+        
+        
+        
+
+        <table class="container">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Local</th>
+                    <th>Data</th>
+                    <th>Horario</th>
+                    <th>Deletar</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="evento : ${eventos}">
+                    <div class="row">
+                        <td><a th:href="${(#mvc.url('EC#detalhesEvento').arg(0, evento.codigo)).build()}" target="_blank"><span th:text="${evento.nome}"></span></a></td>
+                        <td><span th:text="${evento.local}"></span></td>
+                        <td><span th:text="${evento.data}"></span></td>
+                        <td><span th:text="${evento.horario}"></span></td>
+                        <td><a th:href="${(#mvc.url('EC#deletarEvento').arg(0, evento.codigo)).build()}" target="_blank"><i class="material-icons left">delete_forever</i></a></td>
+                    </div>
+                </tr>
+            </tbody>
+        
+
+        </table>
+    </body>
+</html>

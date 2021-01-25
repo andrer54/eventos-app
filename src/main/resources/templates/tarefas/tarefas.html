@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Tarefas APP</title>
+    </head>
+    <body>
+        <h1>Lista de tarefas</h1>
+        <h3><a href="/cadastrarEvento">Cadastrar Evento</a></h3>
+        <h3><a href="/tarefas">Tarefas</a></h3>
+        <h3><a href="/cadastrarTarefa">Cadastrar Tarefa</a></h3>
+        
+        <div th:each="tarefa : ${tarefas}">
+            <div class="row">
+                <p><span th:text="${tarefa.nome}"></span></p>
+                <p><span th:text="${tarefa.feito}"></span></p>
+            </div>
+        </div>
+    </body>
+</html>
