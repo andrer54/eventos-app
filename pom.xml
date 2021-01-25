@@ -14,7 +14,7 @@
 	<name>todoapp</name>
 	<description>To do! project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		
 	</properties>
 	<dependencies>
 		<dependency>
