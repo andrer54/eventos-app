@@ -38,7 +38,7 @@ public class EventoController {
         }
         er.save(evento);
         attributes.addFlashAttribute("mensagem","Evento cadastrado com sucesso!!");
-        return "redirect:/cadastrarEvento";
+        return "redirect:/";
     }
     @RequestMapping("/")
     public ModelAndView listaEventos(){
@@ -62,7 +62,7 @@ public class EventoController {
     public String deletarEvento(long codigo){
         Evento evento = er.findByCodigo(codigo);
         er.delete(evento);
-        return "redirect:/eventos";
+        return "redirect:/";
     }
 
 
