@@ -40,7 +40,7 @@ public class EventoController {
         attributes.addFlashAttribute("mensagem","Evento cadastrado com sucesso!!");
         return "redirect:/cadastrarEvento";
     }
-    @RequestMapping("/eventos")
+    @RequestMapping("/")
     public ModelAndView listaEventos(){
         ModelAndView mv = new ModelAndView("index");
         Iterable<Evento> eventos = er.findAll();
