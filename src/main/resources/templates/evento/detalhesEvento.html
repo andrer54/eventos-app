@@ -7,10 +7,18 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
+        <nav>
+            <div class="nav-wrapper indigo">
+              <a href="#" class="brand-logo center">Agenda de eventos</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/cadastrarEvento" class="waves-effect waves-light btn">Cadastrar evento</a></li>
+                
+              </ul>
+            </div>
+          </nav>
         <h1>Evento</h1>
-        <a href="/cadastrarEvento" class="waves-effect waves-light btn">Cadastrar evento</a>
-        <a href="/cadastrarTarefas" class="waves-effect waves-light btn">Cadastrar tarefas</a>
-        <a href="/tarefas" class="waves-effect waves-light btn">tarefas</a>
+
+
 
         <div th:each="evento : ${evento}" class="container">
             <div class="row">
